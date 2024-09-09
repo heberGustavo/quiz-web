@@ -44,7 +44,7 @@ export default class QuestaoModel {
         return false;
     }
 
-    toObject(){
+    toObject() {
         return {
             id: this.#id,
             enunciado: this.#enunciado,

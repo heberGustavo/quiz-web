@@ -3,6 +3,16 @@
 import questoes from "../bancoDeQuestoes";
 
 export default (req, res) => {
-    console.log(questoes[0].id)
-    res.status(200).json(questoes[0].toObject())
+    const query = req.query;
+    const idSelecionado = +query.id;
+
+    const unicaQuestaoSelecionada = questoes.filter(quest => quest.id === idSelecionado);
+
+    if(unicaQuestaoSelecionada.length === 1) {
+        const questaoSelecionada = unicaQuestaoSelecionada[0];
+        res.status(200).json(questaoSelecionada.toObject());
+    }
+    else{
+        res.status(204).send();
+    }
 }

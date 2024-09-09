@@ -1,4 +1,5 @@
 /* eslint-disable prefer-const */
+import { embaralhar } from "../functions/embaralhar";
 import RespostaModel from "./resposta";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -42,6 +43,11 @@ export default class QuestaoModel {
         }
 
         return false;
+    }
+    
+    embaralharRespostas() : QuestaoModel {
+        let respostasEmbaralhadas = embaralhar(this.#respostas);
+        return new QuestaoModel(this.#id, this.#enunciado, respostasEmbaralhadas, this.#acertou);
     }
 
     toObject() {

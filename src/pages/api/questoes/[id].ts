@@ -9,7 +9,7 @@ export default (req, res) => {
     const unicaQuestaoSelecionada = questoes.filter(quest => quest.id === idSelecionado);
 
     if(unicaQuestaoSelecionada.length === 1) {
-        const questaoSelecionada = unicaQuestaoSelecionada[0];
+        const questaoSelecionada = unicaQuestaoSelecionada[0].embaralharRespostas();
         res.status(200).json(questaoSelecionada.toObject());
     }
     else{

@@ -18,7 +18,6 @@ export default function Home() {
   const [questao, setQuestao] = useState(questaoMock);
 
   function respostaFornecida(indice: number) {
-    console.log(indice)
     setQuestao(questao.responderCom(indice))
   }
 
@@ -29,7 +28,7 @@ export default function Home() {
       alignItems: "center",
       height: "100vh"
     }}>
-      <Questao valor={questaoMock} respostaFornecida={respostaFornecida} />
+      <Questao valor={questao} respostaFornecida={respostaFornecida} />
     </div>
   );
 }

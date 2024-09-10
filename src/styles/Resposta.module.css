@@ -6,7 +6,7 @@
     margin: 10px;
 }
 
-.conteudoResposta{
+.conteudoResposta {
     position: relative;
     display: flex;
     flex: 1;
@@ -26,6 +26,28 @@
     align-items: center;
     border-radius: 12px;
     padding: 15px;
+}
+
+.verso>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border-radius: 12px;
+}
+
+.certa {
+    background-color: #2BAA6D;
+}
+
+.certa .valor,
+.errada .valor {
+    font-size: 1.5rem;
+}
+
+.errada {
+    background-color: #E44A4C;
 }
 
 .letra {

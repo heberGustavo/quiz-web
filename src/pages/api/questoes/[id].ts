@@ -10,6 +10,7 @@ export default (req, res) => {
 
     if(unicaQuestaoSelecionada.length === 1) {
         const questaoSelecionada = unicaQuestaoSelecionada[0].embaralharRespostas();
+
         res.status(200).json(questaoSelecionada.toObject());
     }
     else{

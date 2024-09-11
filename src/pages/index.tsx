@@ -3,6 +3,7 @@ import Questao from "../../components/Questao";
 import QuestaoModel from "../../model/questao";
 import RespostaModel from "../../model/resposta";
 import Botao from "../../components/Botao";
+import Questionario from "../../components/Questionario";
 
 const questaoMock = new QuestaoModel(
   212,
@@ -18,13 +19,12 @@ const questaoMock = new QuestaoModel(
 export default function Home() {
   const [questao, setQuestao] = useState(questaoMock);
 
-  function respostaFornecida(indice: number) {
-    setQuestao(questao.responderCom(indice))
+  function questaoRespondida(questao: QuestaoModel){
+
   }
 
-  function tempoEsgotado() {
-    if (questao.naoRespondida)
-      setQuestao(questao.responderCom(-1))
+  function irPraProximoPasso(){
+
   }
 
   return (
@@ -35,8 +35,11 @@ export default function Home() {
       alignItems: "center",
       height: "100vh"
     }}>
-      <Questao valor={questao} tempoPraResposta={2} respostaFornecida={respostaFornecida} tempoEsgotado={tempoEsgotado} />
-      <Botao texto="Proximo" href="/resultado" />
+      <Questionario 
+        questao={questao} 
+        ultima={true}
+        questaoRespondida={questaoRespondida}
+        irPraProximoPasso={irPraProximoPasso} />
     </div>
   );
 }

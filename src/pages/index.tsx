@@ -1,8 +1,6 @@
-import { useState } from "react";
-import Questao from "../../components/Questao";
+import { useEffect, useState } from "react";
 import QuestaoModel from "../../model/questao";
 import RespostaModel from "../../model/resposta";
-import Botao from "../../components/Botao";
 import Questionario from "../../components/Questionario";
 
 const questaoMock = new QuestaoModel(
@@ -16,8 +14,33 @@ const questaoMock = new QuestaoModel(
   ]
 );
 
+const BASE_URL = "http://localhost:3000/api";
+
 export default function Home() {
-  const [questao, setQuestao] = useState(questaoMock);
+  const [idsQuestoes, setIdsQuestoes] = useState<number[]>([]);
+  const [questao, setQuestao] = useState<QuestaoModel>(questaoMock);
+
+  useEffect(() => {
+    carregarIdsQuestoes();
+  }, [])
+
+  useEffect(() => {
+    if(idsQuestoes.length > 0)
+      carregarQuestao(idsQuestoes[0]);
+  }, [idsQuestoes])
+
+  async function carregarIdsQuestoes() {
+    const resp = await fetch(`${BASE_URL}/questionario`);
+    const ids = await resp.json();
+    setIdsQuestoes(ids);
+  }
+
+  async function carregarQuestao(idQuestao: number) {
+    const resp = await fetch(`${BASE_URL}/questoes/${idQuestao}`);
+    const json = await resp.json();
+    const novaQuestao = QuestaoModel.criarUsandoObjeto(json);
+    setQuestao(novaQuestao);
+  }
 
   function questaoRespondida(questao: QuestaoModel){
 
@@ -28,18 +51,10 @@ export default function Home() {
   }
 
   return (
-    <div style={{
-      display: "flex",
-      justifyContent: "center",
-      flexDirection: "column",
-      alignItems: "center",
-      height: "100vh"
-    }}>
-      <Questionario 
+    <Questionario 
         questao={questao} 
         ultima={true}
         questaoRespondida={questaoRespondida}
         irPraProximoPasso={irPraProximoPasso} />
-    </div>
   );
 }

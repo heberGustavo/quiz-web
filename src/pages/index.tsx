@@ -42,8 +42,10 @@ export default function Home() {
   }
 
   function idProximaQuestao() {
-    const proximoIndice = idsQuestoes.indexOf(questao.id) + 1;
-    return idsQuestoes[proximoIndice];
+    if(questao){
+      const proximoIndice = idsQuestoes.indexOf(questao.id) + 1;
+      return idsQuestoes[proximoIndice];
+    }
   }
 
   function irPraProximoPasso() {

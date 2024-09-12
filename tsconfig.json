@@ -17,6 +17,6 @@
     },
     "target": "ES6"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/api/questoes/[id].js", "src/pages/api/questionario/index.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/api/questoes/[id].ts", "src/pages/api/questionario/index.ts"],
   "exclude": ["node_modules"]
 }

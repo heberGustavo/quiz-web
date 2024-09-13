@@ -23,7 +23,7 @@
 - Components
 - Functions
 - Models
-- Tailwind
+- CSS Modules
 
 ## :gear: Architecture
 ![image](https://github.com/user-attachments/assets/ee6576da-ff48-418b-808d-2c40c24e3584)

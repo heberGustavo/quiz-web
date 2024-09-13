@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import QuestaoModel from "../../model/questao";
 import Questionario from "../../components/Questionario";
 import { useRouter } from "next/router";
+import { obterUrlBase } from "../../functions/obterUrlBase";
 
-const BASE_URL = "https://quiz-eta-plum.vercel.app/api/";
+const BASE_URL = `${obterUrlBase()}/api`;
 
 export default function Home() {
   const router = useRouter();
-
+  
   const [idsQuestoes, setIdsQuestoes] = useState<number[]>([]);
   const [questao, setQuestao] = useState<QuestaoModel>();
   const [respostasCertas, setRespostasCertas] = useState<number>(0);

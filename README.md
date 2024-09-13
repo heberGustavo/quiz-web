@@ -26,7 +26,7 @@
 - CSS Modules
 
 ## :gear: Architecture
-![image](https://github.com/user-attachments/assets/ee6576da-ff48-418b-808d-2c40c24e3584)
+![image](https://github.com/user-attachments/assets/4dbf3699-f298-453c-8618-108786b80175)
 
 ## :round_pushpin: Demo
 [screencast-quiz-eta-plum.vercel.app-2024.09.13-07_24_59.webm](https://github.com/user-attachments/assets/3967b54c-cee4-4988-86c8-facf5ab0f283)

@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useRouter } from "next/router";
 import styles from "../styles/Resultado.module.css";
-import Estatistica from "../../components/Estatistica";
-import Botao from "../../components/Botao";
+import Estatistica from "@/components/Estatistica";
+import Botao from "@/components/Botao";
 
 export default function resultado() {
     const router = useRouter();

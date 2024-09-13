@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import QuestaoModel from "../../model/questao";
-import Questionario from "../../components/Questionario";
+import Questionario from "@/components/Questionario";
 import { useRouter } from "next/router";
 import { obterUrlBase } from "../../functions/obterUrlBase";
 

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import styles from "../src/styles/Estatistica.module.css";
+import styles from "@/styles/Estatistica.module.css";
 
 interface EstatisticaProps {
     valor: any;

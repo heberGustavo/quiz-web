@@ -1,5 +1,5 @@
-import QuestaoModel from "../model/questao";
-import styles from "../src/styles/Questionario.module.css";
+import QuestaoModel from "../../model/questao";
+import styles from "@/styles/Questionario.module.css";
 import Botao from "./Botao";
 import Questao from "./Questao";
 

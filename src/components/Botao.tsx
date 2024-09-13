@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from "next/link";
-import styles from "../src/styles/Botao.module.css";
+import styles from "@/styles/Botao.module.css";
 
 interface BotaoProps {
   texto: string;

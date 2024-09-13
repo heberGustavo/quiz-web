@@ -1,5 +1,5 @@
 import styles from "@/styles/Resposta.module.css";
-import RespostaModel from "../model/resposta";
+import RespostaModel from "../../model/resposta";
 
 interface RespostaProps {
     valor: RespostaModel;

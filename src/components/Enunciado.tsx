@@ -1,4 +1,4 @@
-import styles from "../src/styles/Enunciado.module.css";
+import styles from "@/styles/Enunciado.module.css";
 
 interface EnunciadoProps {
   texto: string;

@@ -1,6 +1,6 @@
-import styles from "../src/styles/Questao.module.css";
+import styles from "@/styles/Questao.module.css";
 
-import QuestaoModel from "../model/questao";
+import QuestaoModel from "../../model/questao";
 import Enunciado from "./Enunciado";
 import Resposta from "./Resposta";
 import Temporizador from "./Temporizador";
